@@ -1,0 +1,177 @@
+body {
+    overflow: hidden;
+}
+
+.tall {
+    height: 100%;
+}
+
+.container {
+    height: 100vh;
+}
+
+.center-inside {
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.left-side {
+    background-color: #58595B;
+    padding-left: 20px;
+    background-image: url("../img/corn-grey.jpg");
+    background-size: cover;
+}
+
+.top-nav {
+    font-family: "Montserrat", "Gotham", "Helvetica", sans-serif;
+    margin-top: 20px;
+    width: 300px;
+}
+
+.logo {
+    position: relative;
+    background-color: white;
+    height: 70px;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+.button-container {
+    display: flex;
+}
+
+.nav-buttons {
+    background-color: #3CE6AD;
+    height: 50px;
+    z-index: 2;
+
+    -webkit-transition: all 0.55s ease;
+	-moz-transition: all 0.55s ease;
+	transition: all 0.55s ease;
+}
+
+.nav-toggle {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    user-select: none;
+    position: relative;
+    -webkit-flex: none;
+    flex: none;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-buttons:hover {
+
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    background-color: #38D9A3;
+    transform: scale(1.025);
+
+    -webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+#nav-scaler {
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: 0;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -45px;
+    width: 8px;
+    height: 8px;
+    background-color: #3CE6AD;
+    -webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+.grow {
+    border-radius: 1%;
+    transform: scale(310);
+    height: 100%;
+
+    -webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+.order-button {
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+
+.order-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-holder {
+    position: relative;
+    margin-top: 13px;
+    margin-left: 14px;
+}
+
+.right-side {
+    position: relative;
+    z-index: 2;
+    background-color: #F1F1F1;
+}
+
+.intro-text h4 {
+}
+
+.white {
+    background-color: white;
+
+    -webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+.order-button .green-text {
+    color: #3CE6AD;
+}
+
+/*
+Stuff
+*/
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 22px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  top: 10px;
+}
+#nav-toggle span:before {
+  top: -7px;
+}
+#nav-toggle span:after {
+  top: 7px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 250ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
