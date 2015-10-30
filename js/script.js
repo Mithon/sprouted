@@ -8,8 +8,22 @@ $(document).ready(function()    {
             history.pushState(null, null, _href);
 
             function loadContent(_href) {
+                $("#r-side")
+                    .find("#r-content")
+                    .fadeOut(200, function() {
+                        $("#r-side").hide().load(href + "#r-content", function() {
+                            $("#r-side").fadeIn(200, function() {
 
+                            });
+                            console.log(href);
+                        });
+                    });
             }
+
+            $(window).bind('popstate', function() {
+                _link = location.pathname.replace(/^.*[\\\/]/, '');
+                loadContent(_link);
+            });
 
         } else {
 
@@ -35,5 +49,3 @@ $(document).ready(function()    {
       $( "nav" ).toggleClass( "hidden-nav" );
     });
 });
-
-console.log("hutn");
