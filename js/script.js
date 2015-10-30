@@ -11,7 +11,7 @@ $(document).ready(function()    {
                 return false;
             });
 
-            function loadContent(_href) {
+            function loadContent(href) {
                 $("#r-side")
                     .find("#r-content")
                     .fadeOut(200, function() {
