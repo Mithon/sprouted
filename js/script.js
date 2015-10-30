@@ -3,9 +3,13 @@ $(document).ready(function()    {
 
         if (Modernizr.history) {
 
-            _href = $(this).attr("href");
 
-            history.pushState(null, null, _href);
+            $("nav").delegate("a", "click", function() {
+                _link = $(this).attr("href");
+                history.pushState(null, null, _link);
+                loadContent(_link);
+                return false;
+            });
 
             function loadContent(_href) {
                 $("#r-side")
