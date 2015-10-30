@@ -26,6 +26,51 @@ body {
     background-size: cover;
 }
 
+
+
+
+/*
+Stuff
+*/
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 22px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  top: 10px;
+}
+#nav-toggle span:before {
+  top: -7px;
+}
+#nav-toggle span:after {
+  top: 7px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 250ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+/*
+Nav Stuff
+*/
+
 .top-nav {
     font-family: "Montserrat", "Gotham", "Helvetica", sans-serif;
     margin-top: 20px;
@@ -82,22 +127,21 @@ body {
     position: absolute;
     margin-top: 15px;
     margin-left: -45px;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background-color: #3CE6AD;
-    -webkit-transition: all 0.25s ease;
-	-moz-transition: all 0.25s ease;
-	transition: all 0.25s ease;
+    -webkit-transition: all 0.20s ease;
+	-moz-transition: all 0.20s ease;
+	transition: all 0.20s ease;
 }
 
 .grow {
-    border-radius: 1%;
-    transform: scale(310);
-    height: 100%;
+    transform: scale(300);
+    height: 100vh;
 
-    -webkit-transition: all 0.25s ease;
-	-moz-transition: all 0.25s ease;
-	transition: all 0.25s ease;
+    -webkit-transition: all 0.35s ease;
+	-moz-transition: all 0.35s ease;
+	transition: all 0.35s ease;
 }
 
 .order-button {
@@ -126,6 +170,10 @@ body {
 .intro-text h4 {
 }
 
+.nav-buttons.white:hover {
+    background-color: #ebf9f4;
+}
+
 .white {
     background-color: white;
 
@@ -138,40 +186,79 @@ body {
     color: #3CE6AD;
 }
 
-/*
-Stuff
-*/
+nav {
+    margin-top: 10vh;
+    float: right;
+    text-align: right;
+    opacity: 1;
 
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 3px;
-  width: 22px;
-  background: white;
-  position: absolute;
-  display: block;
-  content: '';
-  top: 10px;
-}
-#nav-toggle span:before {
-  top: -7px;
-}
-#nav-toggle span:after {
-  top: 7px;
+    -webkit-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transform: translate(0, 0) scale(1);
 }
 
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  transition: all 250ms ease-in-out;
+.hidden-nav {
+    opacity: 0;
+    transform: translate(-200%, -55%) scale(0.1);
+
+
+    -webkit-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
-#nav-toggle.active span {
-  background-color: transparent;
+
+nav ul {
+    list-style: none;
 }
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-  top: 0;
+
+nav a {
+    font-style: italic;
+    position: relative;
+    z-index: 3;
+    margin-right: 20%;
+    text-decoration: none;
+    color: white;
+    font-size: 5.5em;
 }
-#nav-toggle.active span:before {
-  transform: rotate(45deg);
+
+nav a:hover {
+    color: white;
 }
-#nav-toggle.active span:after {
-  transform: rotate(-45deg);
+
+nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 7px;
+    left: 0;
+    height: 0;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+nav a:hover:before {
+    bottom: 9px;
+    height: 2px;
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+nav a::after {
+    position: relative;
+    margin-top: 16%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: block;
+    float: right;
+    background-color: white;
+    border-bottom: 0px solid orange;
+    content: " ";
+    width: 50px;
+    height: 2px;
+    top: 20px;
+    z-index: 2;
 }
