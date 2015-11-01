@@ -13,7 +13,7 @@ $(document).ready(function()    {
     }
 
     $( "#toggle-box" ).on("click", function() {
-        window.history.pushState("hello", "Title", "/new-url");
+        window.history.replaceState(null, null, 'hello');
       $( "#nav-toggle" ).toggleClass( "active" );
       $( "#nav-scaler" ).toggleClass( "grow" );
       $( "#order-button" ).toggleClass( "white" );
