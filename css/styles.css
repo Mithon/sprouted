@@ -10,6 +10,11 @@ body {
     height: 100vh;
 }
 
+body .hidden {
+    display: none;
+    opacity: 0;
+}
+
 .center-inside {
     display: -webkit-flex;
     display:         flex;
@@ -52,7 +57,7 @@ Stuff
 }
 
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  transition: all 250ms ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 #nav-toggle.active span {
   background-color: transparent;
@@ -83,6 +88,20 @@ Nav Stuff
     height: 70px;
     margin-bottom: 10px;
     z-index: 2;
+    cursor: pointer;
+
+    -webkit-transition: all 0.55s ease;
+	-moz-transition: all 0.55s ease;
+	transition: all 0.55s ease;
+}
+
+.logo:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    transform: scale(1.02);
+
+    -webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
 }
 
 .button-container {
@@ -100,7 +119,8 @@ Nav Stuff
 }
 
 .nav-toggle {
-    -webkit-user-select: none;  /* Chrome all / Safari all */
+    cursor: pointer;
+    -webkit-user-select: none;
     user-select: none;
     position: relative;
     -webkit-flex: none;
@@ -113,17 +133,21 @@ Nav Stuff
 
 	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
     background-color: #38D9A3;
-    transform: scale(1.025);
+    transform: scale(1.03);
 
     -webkit-transition: all 0.25s ease;
 	-moz-transition: all 0.25s ease;
 	transition: all 0.25s ease;
 }
 
+.nav-buttons.nav-toggle:hover {
+    transform: scale(1.05);
+}
+
 #nav-scaler {
     border-radius: 50%;
     opacity: 0.7;
-    z-index: 0;
+    z-index: 1;
     position: absolute;
     margin-top: 15px;
     margin-left: -45px;
@@ -150,9 +174,11 @@ Nav Stuff
     text-align: center;
 }
 
-.order-button a {
+.order-button p {
     color: white;
-    text-decoration: none;
+    display: block;
+    margin: 0;
+    font-size: 1em;
 }
 
 .nav-holder {
@@ -206,11 +232,21 @@ nav {
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
-nav ul {
-    list-style: none;
+nav {
+    position: relative;
+    z-index: 2;
 }
 
-nav a {
+nav ul {
+    list-style: none;
+    float: right;
+}
+
+nav li {
+    cursor: pointer;
+    text-align: right;
+    padding-right: 0;
+    float: right;
     font-style: italic;
     position: relative;
     z-index: 3;
@@ -218,18 +254,15 @@ nav a {
     text-decoration: none;
     color: white;
     font-size: 5.5em;
+    display: block;
 }
 
-nav a:hover {
-    color: white;
-}
-
-nav a::before {
+nav li::before {
     content: "";
     position: absolute;
-    width: 100%;
-    bottom: 7px;
-    left: 0;
+    width: 105%;
+    bottom: 25px;
+    right: 0;
     height: 0;
     background-color: white;
     visibility: hidden;
@@ -239,18 +272,20 @@ nav a::before {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
-nav a:hover:before {
-    bottom: 9px;
+.contact-button::before {
+    width: 98%;
+}
+
+nav li:hover:before {
+    bottom: 30px;
     height: 2px;
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-nav a::after {
-    position: relative;
-    margin-top: 16%;
-    transform: translateY(-50%);
+nav li::after {
+    position: absolute;
     z-index: 3;
     display: block;
     float: right;
@@ -259,6 +294,61 @@ nav a::after {
     content: " ";
     width: 50px;
     height: 2px;
-    top: 20px;
+    top: 50%;
+    right: -120px;
     z-index: 2;
+}
+
+.active-page-button {
+    cursor: default;
+    position: relative;
+    z-index: 4;
+}
+
+.active-page-button::before {
+    display: none;
+}
+
+.active-page-button::after {
+    position: absolute;
+    opacity: 0.7;
+    z-index: 3;
+    top: 0;
+    width: 200%;
+    height: 100%;
+
+}
+
+
+/*
+Contact Page
+*/
+
+.left-content {
+    position: absolute;
+    z-index: 0;
+    width: 46%;
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+.contact-content {
+    position: relative;
+    z-index: -900;
+    width: 100%;
+}
+
+.left-content-container {
+
+}
+
+.map {
+    position: relative;
+    float: right;
+    width: 100%;
+    margin: 0 auto;
+    height: 500px;
+    background-color: white;
+    border: 10px solid white;
+    z-index: -100;
 }
