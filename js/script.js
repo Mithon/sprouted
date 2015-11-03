@@ -4,7 +4,10 @@
     var navOpen = false;
     var cPage = 'index';
     var pPage = '';
+    var activeMenu = 'dinner';
     var nav = document.querySelector('.hidden-nav');
+    var menuNav = document.querySelector('.menu-nav');
+    var menuList = document.querySelector('.menu-list');
     var uniqueStart = false;
     var path = window.location.pathname;
     var pageName = path.split("/").pop();
@@ -51,6 +54,8 @@
     $( ".logo" ).on('click', function() {
         if (cPage != 'index') {
             window.history.pushState(cPage, null, 'index.html');
+            if (navOpen == false)
+                toggleNav();
             makeTransition('index');
             cPage = "index";
         }
@@ -96,7 +101,39 @@
         e.stopPropagation();
     }, false);
 
+    menuNav.addEventListener('click', function(e){
+        if(e.target != e.currentTarget && e.target.getAttribute('data-name')){
+            e.preventDefault();
+            var data = e.target.getAttribute('data-name');
+            $("." + activeMenu + "-menu").fadeOut(250, function() {
+                $(this).addClass('hidden');
+                $("." + activeMenu + "-button").removeClass("active-menu");
+                $("." + data + "-menu").hide().removeClass("hidden").fadeIn(250);
+                $("." + data + "-button").addClass("active-menu");
+                activeMenu = data;
+            });
+            console.log(data);
+        }
+        e.stopPropagation();
+    }, false);
 
+    menuList.addEventListener('click', function(e){
+        if(e.target != e.currentTarget && e.target.getAttribute('data-name')){
+            e.preventDefault();
+            var data = e.target.getAttribute('data-name');
+            $("." + activeMenu + "-menu").fadeOut(250, function() {
+                $(this).addClass('hidden');
+                $("." + activeMenu + "-button").removeClass("active-menu");
+                $("." + data + "-menu").hide().removeClass("hidden").fadeIn(250);
+                $("." + data + "-button").addClass("active-menu");
+                activeMenu = data;
+            });
+            console.log(data);
+        }
+        e.stopPropagation();
+    }, false);
+
+    makeTransition('menu');
 
 })();
 

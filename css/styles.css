@@ -146,7 +146,7 @@ Nav Stuff
 
 #nav-scaler {
     border-radius: 50%;
-    opacity: 0.7;
+    opacity: 0.8;
     z-index: 1;
     position: absolute;
     margin-top: 15px;
@@ -351,4 +351,117 @@ Contact Page
     background-color: white;
     border: 10px solid white;
     z-index: -100;
+}
+
+/*
+Menu Page
+*/
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.menu-nav {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+}
+
+.menu-nav ul {
+    list-style: none;
+    text-align: center;
+    background-color: #3CE6AD;
+    height: 85px;
+}
+
+.menu-nav li {
+    cursor: pointer;
+    background-color: #3CE6AD;
+    padding: 30px 0;
+    color: white;
+    font-size: 1.6rem;
+    font-family: "Montserrat", "Gotham", "Helvetica", sans-serif;
+    -webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+.menu-nav li:hover {
+    background-color: #38D9A3;
+
+    -webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+ul .active-menu {
+    background-color: #38D9A3;
+
+    -webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+.menu-container {
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+.menu-pane {
+    opacity: 1;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 85px;
+
+    -webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+.menu-list {
+    list-style: none;
+    text-align: center;
+}
+
+.menu-list li {
+    cursor: pointer;
+    padding: 20px;
+}
+
+.menu-list li:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.menu-list h5{
+    font-size: 1.9rem;
+    margin-bottom: 8px;
+    font-family: "Montserrat", "Gotham", "Helvetica", sans-serif;
+}
+
+.menu-list p {
+    margin: 0 auto;
+    font-style: italic;
+    line-height: 1.35;
+    font-size: 2rem;
+    max-width: 400px;
+}
+
+.menu-section {
+    color: #666;
+    padding-top: 50px;
+}
+
+.menu-section h3 {
+    text-align: center;
+    font-size: 2.7rem;
+    font-family: "Montserrat", "Gotham", "Helvetica", sans-serif;
 }
