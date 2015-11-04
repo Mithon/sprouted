@@ -617,6 +617,14 @@ About Section
 
 @media screen and (max-width: 1000px) {
 
+    nav li:hover:before {
+        bottom: 10px;
+        height: 2px;
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
     body {
         overflow-y: auto;
     }
@@ -687,8 +695,33 @@ About Section
 }
 
 @media screen and (max-width: 700px) {
+
+    nav ul li::after{
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+        width: 80%;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .active-page-button::after {
+        display: block;
+        position: absolute;
+        opacity: 0.7;
+        z-index: 3;
+        top: 0;
+        right: -55%;
+        transform: rotateZ(0);
+        width: 200%;
+        height: 100%;
+        transition: all 0.25s ease-in;
+    }
+
     .tall {
-        height: 65vh;
+        height: 500px;
     }
 
     .contact-info {
@@ -727,22 +760,40 @@ About Section
 
     .hunter-container {
         position: fixed;
-        bottom: 50vh;
+        bottom: 150px;
 
         width: 100%;
     }
 
-    .contact-tall .right-side {
-        height: 40vh;
+    .contact-tall {
+        height: 600px;
     }
 
-    .about-tall .right-side {
-        height: 55vh;
+    .contact-tall .right-side {
+        height: 500px;
     }
 
     .about-tall {
-        height: 45vh;
+        height: 400px;
     }
+
+    .menu-tall .left-side {
+        height: 550px;
+    }
+
+    .menu-tall .right-side {
+        height: auto;
+    }
+
+    .about-tall .right-side {
+        height: 520px;
+    }
+
+    .menu-nav li {
+        width: 33%;
+    }
+
+
 
     .index-tall {
 
