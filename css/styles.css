@@ -1,5 +1,6 @@
 body {
     overflow: hidden;
+    background-color: #F1F1F1;
 }
 
 .tall {
@@ -325,7 +326,7 @@ nav li::before {
     width: 98%;
 }
 
-nav li:hover:before {
+nav li:hover::before {
     bottom: 30px;
     height: 2px;
     visibility: visible;
