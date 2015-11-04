@@ -617,6 +617,10 @@ About Section
 
 @media screen and (max-width: 1000px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     nav li:hover:before {
         bottom: 10px;
         height: 2px;
@@ -627,6 +631,7 @@ About Section
 
     body {
         overflow-y: auto;
+
     }
 
     nav {
@@ -674,6 +679,10 @@ About Section
     .intro-text {
         width: 90%;
         max-width: 600px;
+    }
+
+    #nav-scaler {
+        opacity: 0.95;
     }
 
     .hunter-container {
@@ -774,7 +783,7 @@ About Section
     }
 
     .about-tall {
-        height: 400px;
+        height: 500px;
     }
 
     .menu-tall .left-side {
@@ -792,6 +801,7 @@ About Section
     .menu-nav li {
         width: 33%;
     }
+
 
 
 
