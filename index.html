@@ -35,6 +35,23 @@
 
                             <div class="nav-buttons order-button center-inside" id="order-button">
                                 <p id="order-text">Order Online</p>
+                                <div class="order-hide hidden" id="cart-icon">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                	 viewBox="0 0 89.7 48.5" style="enable-background:new 0 0 89.7 48.5;" xml:space="preserve">
+                                        <g id="background">
+                                        </g>
+                                        <g id="Layer_1">
+                                        	<polygon class="st8 " points="65.3,17.5 61.3,17.5 54.6,32.3 37.2,32.3 27.8,10.9 27.8,10.9 17.4,10.9 17.4,14.3 25.3,14.3
+                                        		34.7,35.7 34.7,35.7 34.7,35.7 57,35.7 57,35.7 57,35.7 	"/>
+                                        	<circle class="st8" cx="37.3" cy="40.3" r="3"/>
+                                        	<circle class="st8" cx="54.2" cy="40.3" r="3"/>
+                                        	<path class="st8" d="M45.9,28.3c1.9,0,4.6,0.4,5.7-5.4c0.7-6.8-4.2-14.1-5.7-14.3c-1.5,0.2-6.3,7.5-5.7,14.3
+                                        		C41.3,28.7,43.9,28.3,45.9,28.3z"/>
+                                        </g>
+                                        <g id="Isolation_Mode">
+                                        </g>
+                                    </svg>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -58,26 +75,49 @@
                 <div class="left-content center-inside">
                     <div class="contact-content center-inside hidden">
                         <div class="left-content-container ten columns">
-                            <img class="map" src="" alt="map of sprouted">
-                            </img>
+                            <div class="contact-info">
+                                <img class="map" src="img/map.jpg" alt="map of sprouted"></img>
+                                <h2 class="item-name">Delivery Area</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-content center-inside hidden">
+                        <div class="left-content-container ten columns">
+                            <div class="item-info">
+                                <img class="item-image" src="img/food.jpg" alt="picture of food item">
+                                </img>
+                                <h2 class="item-name" id="item-name">Farmyard Blend</h2>
+                                <h4 class="item-category local">Local</h4>
+                                <h4 class="item-category organic">Organic</h4>
+                                <h4 class="item-category protein">Protein</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-content hidden">
+                        <div class="about-content hunter-container">
+                            <img class="hunter" src="img/ceo.png" alt="map of CEO"></img>
                         </div>
                     </div>
                 </div>
+
             </div>
 
 
             <div class="one-half tall right-side center-inside">
                 <div class="center-inside index-content">
                     <div class="eight columns row intro-text">
-                        <h4>So you’re a young person who doensn’t have time for good food? Well look again pal. Sprouted brings you organic greens, fast.</h4>
-                        <p>It’s a friday night, you’re hungry. You bought a bulk bag of doritos at the store the other day and its calling your name. So cheesy and delicious. But you can already feel the stomach aches and post-doritos regret deep inside you.
-                            But the store is so far away. BOOM. Sprouted to the rescue. We send you beautiful healthy greens that’ll show up before your episode of Narcos is over. Organic greens, fast.</p>
+                        <h4>So you&#8217;re a young person who doensn&#8217;t have time for good food? Well look again pal. Sprouted brings you organic greens, fast.</h4>
+                        <p>It&#8217;s a friday night, you&#8217;re hungry. You bought a bulk bag of doritos at the store the other day and its calling your name. So cheesy and delicious. But you can already feel the stomach aches and post-doritos regret deep inside you.
+                            But the store is so far away. BOOM. Sprouted to the rescue. We send you beautiful healthy greens that&#8217;ll show up before your episode of Narcos is over. Organic greens, fast.</p>
                     </div>
                 </div>
 
                 <div class="center-inside hidden contact-content">
                     <div class="eight columns row intro-text">
-                        <h1>416-EAT-KALE</h1>
+                        <h1 class="phone">416-EAT-KALE</h1>
+                        <h3 class="email">sprouted@greens.ca</h3>
                         <p>We can talk at pretty much anytime okay? Call us at 3am and we will probably still be up munching on from fresh asparagus. If we don’t pick up feel free to leave us a wonderful voicemail</p>
                     </div>
                 </div>
@@ -96,26 +136,30 @@
                             <section class="menu-section">
                                 <h3>SALADWICHES</h3>
                                 <ul class="menu-list">
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Vegann Medley" data-itemID="0">
+                                        <h5>Vegan Medley</h5>
+                                        <p>Our favourite vegans are in this dish. Oops, I mean they created it.</p>
                                     </li>
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Ceaser (Sand)witch" data-itemID="1">
+                                        <h5>Ceaser (Sand)witch</h5>
+                                        <p>Imagine if ceaser and a witch had a baby but without the warts.</p>
+                                    </li>
+                                    <li class="menu-item" data-name="Garden Smash"  data-itemID="2">
+                                        <h5>Garden Smash</h5>
+                                        <p>We smash together everything we find in the garden to bring this to you.</p>
                                     </li>
                                 </ul>
                             </section>
                             <section class="menu-section">
-                                <h3>SNACKS</h3>
+                                <h3>(VEGAN) BURGERS</h3>
                                 <ul class="menu-list">
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Not Elk Burger" data-itemID="3">
+                                        <h5>Not Elk Burger</h5>
+                                        <p>This is 100% vegan, we swear. Not Elk. Charlie did not shoot it this morning. Honestly he didn't.</p>
                                     </li>
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Cheeseburger" data-itemID="4">
+                                        <h5>Cheeseburger</h5>
+                                        <p>No, not a burger with cheese. This is literally a hunk of cheese between two buns. But it's not grilled cheese.</p>
                                     </li>
 
                                 </ul>
@@ -126,34 +170,34 @@
                             <section class="menu-section">
                                 <h3>SANDWICHES</h3>
                                 <ul class="menu-list">
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item selected-item" data-name="Farmyard Blend" data-itemID="7">
+                                        <h5>Farmyard Blend</h5>
+                                        <p>Bunch of random animals like cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
                                     </li>
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Nice Buns" data-itemID="5">
+                                        <h5>Nice Buns</h5>
+                                        <p>Hey there good lookin, eat this sandwich. Saucy and delicious mix of capers, kale and tomato sauce.</p>
                                     </li>
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Sandy Cheeks" data-itemID="6">
+                                        <h5>Sandy Cheeks</h5>
+                                        <p>If the squirrel from spongebob could make a sandwich it would taste like this.</p>
                                     </li>
                                 </ul>
                             </section>
                             <section class="menu-section">
                                 <h3>SALADS</h3>
                                 <ul class="menu-list">
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="By the She Shore" data-itemID="8">
+                                        <h5>By the She Shore</h5>
+                                        <p>The newest fake fish technology went into the creation of this salad. Sea Shells instead of Croutons.</p>
                                     </li>
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Salad" data-itemID="9">
+                                        <h5>Salad</h5>
+                                        <p>For the minimalists. It&#8217;s just kale in a bowl.</p>
                                     </li>
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Yummy Yummy, Fruit Salad" data-itemID="10">
+                                        <h5>Yummy Yummy, Fruit Salad</h5>
+                                        <p>There are more fruits than you probably know exist honestly.</p>
                                     </li>
                                 </ul>
                             </section>
@@ -163,34 +207,22 @@
                             <section class="menu-section">
                                 <h3>SMOOTHIES</h3>
                                 <ul class="menu-list">
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Smoothies Moves" data-itemID="11">
+                                        <h5>Smoothies Moves</h5>
+                                        <p>For you sweet talking folks who need a drink that is as smooth as they are ;) Also a great laxitive.</p>
                                     </li>
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
-                                    </li>
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Oops not Organic" data-itemID="12">
+                                        <h5>Oops not Organic</h5>
+                                        <p>Literally the only thing on the menu thats not organic. But this banana based smoothy might also be the best tasting thing here. Weird Coincidence.</p>
                                     </li>
                                 </ul>
                             </section>
                             <section class="menu-section">
-                                <h3>JUICES</h3>
+                                <h3>DAILY JUICE</h3>
                                 <ul class="menu-list">
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
-                                    </li>
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
-                                    </li>
-                                    <li>
-                                        <h5>Yo I swear a menu will go here</h5>
-                                        <p>Bunch of random stuff, cow, pig, duck. Jk its vegan stuff served on a bed of self gloating</p>
+                                    <li class="menu-item" data-name="Juice of the Day" data-itemID="13">
+                                        <h5>Juice of the Day</h5>
+                                        <p>We send Dan out to run around and pick fresh fruits and veggies for this juice on the daily.</p>
                                     </li>
                                 </ul>
                             </section>
@@ -201,9 +233,8 @@
 
                 <div class="center-inside hidden about-content">
                     <div class="eight columns row intro-text">
-                        <h1>honestly its gonna be an about page right here</h1>
-                        <p>It’s a friday night, you’re hungry. You bought a bulk bag of doritos at the store the other day and its calling your name. So cheesy and delicious. But you can already feel the stomach aches and post-doritos regret deep inside you.
-                            But the store is so far away. BOOM. Sprouted to the rescue. We send you beautiful healthy greens that’ll show up before your episode of Narcos is over. Organic greens, fast.</p>
+                        <h1>About Sprouted</h1>
+                        <p>Sprouted has been around for about three weeks now. We were going to put one of those Est. 1943 things to make our site look cool but we thought "Est. Three Weeks Ago" would look kinda weird. Anyways it's been an amazing few weeks. So three weeks ago our amazing CEO Hunter Caron decided that it was too hard to get good healthy vegan food quickly and easily. Which is where the idea for sprouted came in. Would more people eat vegan if the amazing food was right there at their fingertips? We thought so and now here we are.</p>
                     </div>
                 </div>
             </div>
