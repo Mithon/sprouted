@@ -694,6 +694,13 @@ About Section
         width: 50%;
     }
 
+
+
+
+    .menu-tall .left-side {
+        height: 400px;
+    }
+
     .contact-info {
         position: fixed;
         right: 10%;
@@ -702,6 +709,26 @@ About Section
         margin-left: 0;
     }
 
+    .menu-nav li {
+        width: 33%;
+    }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+
+
+    .left-content .menu-content {
+        margin-bottom: 80px;
+    }
+    .left-content {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -769,8 +796,9 @@ About Section
     }
 
     .hunter-container {
-        position: fixed;
-        bottom: 150px;
+        position: absolute;
+
+        top: 300px;
 
         width: 100%;
     }
@@ -788,7 +816,7 @@ About Section
     }
 
     .menu-tall .left-side {
-        height: 550px;
+        height: 590px;
     }
 
     .menu-tall .right-side {
@@ -799,9 +827,7 @@ About Section
         height: 520px;
     }
 
-    .menu-nav li {
-        width: 33%;
-    }
+
 
 
 
