@@ -785,6 +785,10 @@ About Section
         width: 85%;
     }
 
+    .right-side {
+        padding-top: 30px;
+    }
+
     .left-content-container {
         padding-top: 20px;
         width: 90%;
