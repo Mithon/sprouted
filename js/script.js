@@ -214,6 +214,8 @@
                 url = data + ".html";
             //changing url to current page
             window.history.pushState(data, null, url);
+            //remove current tall class
+            $('.tall').removeClass(cPage + "-tall");
             makeTransition(data);
             //asingnign current page variable
             pPage = cPage;

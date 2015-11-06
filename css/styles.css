@@ -733,6 +733,7 @@ About Section
 
 @media screen and (max-width: 700px) {
 
+
     nav ul li::after{
         display: none;
     }
@@ -798,7 +799,7 @@ About Section
     .hunter-container {
         position: absolute;
 
-        top: 300px;
+        top: 350px;
 
         width: 100%;
     }
@@ -837,6 +838,6 @@ About Section
     }
 
     .grow {
-        transform: scale(170);
+        transform: scale(140);
 
 }
